@@ -1,6 +1,10 @@
 import Head from "next/head"
+import { getFeaturedEvents } from "../dummy-data"
+import EventList from "../components/events/event-list"
 
 function HomePage() {
+	const featuredEvents = getFeaturedEvents()
+
 	return (
 		<div>
 			<Head>
@@ -11,7 +15,7 @@ function HomePage() {
 				/>
 			</Head>
 			<main>
-				<h1>The home page</h1>
+				<EventList items={featuredEvents} />
 			</main>
 		</div>
 	)
