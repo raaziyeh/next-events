@@ -1,7 +1,7 @@
 import Button from "../ui/button"
-import LocationIcon from "../icons/LocationIcon"
-import DateIcon from "../icons/DateIcon"
-import ArrowRightIcon from "../icons/ArrowRightIcon"
+import LocationIcon from "../icons/location-icon"
+import DateIcon from "../icons/date-icon"
+import ArrowRightIcon from "../icons/arrow-right-icon"
 import styles from "./event-item.module.css"
 
 function EventItem(props) {
