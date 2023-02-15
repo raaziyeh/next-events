@@ -5,10 +5,19 @@ function Button(props) {
 	const classNamePhrase = props.className
 		? styles.btn + " " + props.className
 		: styles.btn
+
+	if (props.link) {
+		return (
+			<Link href={props.link} className={classNamePhrase}>
+				{props.children}
+			</Link>
+		)
+	}
+
 	return (
-		<Link href={props.link} className={classNamePhrase}>
+		<button className={classNamePhrase} onClick={props.onClick}>
 			{props.children}
-		</Link>
+		</button>
 	)
 }
 
