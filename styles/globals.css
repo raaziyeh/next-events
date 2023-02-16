@@ -32,8 +32,8 @@ ul {
 	list-style: none;
 }
 
-.centered-message {
-	margin: 3rem auto;
+.center {
+	margin: auto;
 	text-align: center;
 }
 

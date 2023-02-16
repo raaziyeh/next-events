@@ -1,0 +1,12 @@
+.error {
+	width: 90%;
+	max-width: 40rem;
+	margin: 1rem auto;
+	padding: 1rem 2rem;
+	border-radius: 6px;
+	background-color: plum;
+	color: purple;
+	font-weight: bold;
+	font-size: 1.5em;
+	text-align: center;
+}
