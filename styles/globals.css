@@ -32,6 +32,11 @@ ul {
 	list-style: none;
 }
 
+.centered-message {
+	margin: 3rem auto;
+	text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
