@@ -1,6 +1,7 @@
 import { useRouter } from "next/router"
 import { getFilteredEvents } from "../../dummy-data"
 import EventList from "../../components/events/event-list"
+import ResultTitle from "../../components/events/result-title"
 
 function FilteredEventsPage() {
 	const router = useRouter()
@@ -39,9 +40,10 @@ function FilteredEventsPage() {
 	}
 
 	return (
-		<div>
+		<>
+			<ResultTitle date={new Date(2021, 4)}/>
 			<EventList items={filteredEvents} />
-		</div>
+		</>
 	)
 }
 
