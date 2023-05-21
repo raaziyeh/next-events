@@ -1,3 +1,20 @@
+<h1> Nextjs Pre-rendering Feature Summary</h1>
+<p>The most important feature of Next.js. good for User experience at inital loading of pages and good for SEO (browser crawlers see content in the HTML).</p>
+for data fetching in a Next.js app, we have multiple choices and options that the best one depends on the use case.
+
+<h2>SSG </h2>
+Static Site Generation, <strong> getStaticProps()</strong> 
+<ul>
+   <li> prepare data (props) for page component during build time and pre-renders it </li>
+   <li> <strong>ISR</strong> (Incrementally Static Regeneration) by adding revalidate key (with seconds value) in returned object</li>
+   <li> ISR gauranties that the page won't be outdated more than revalidate seconds (if a request reaches the server and the page is outdated (based on revalidate value) it will pre-render it again</li>
+   <li> <strong> getStaticPaths() is required for dynamic paths </strong></li>
+    <li> in getStaticPaths() we often want to pre-render only some of the most-visited paths and so we can set fallback: true or 'blocking'</li>
+   <li> when the the fallback is set to true or 'blocking', getStaticPaths should anticipate {notFound: true} condition</li>
+   <li>SSG and Client-side fetching can be used together to provide the best user-experience with the most up-to-date data</li>
+</ul>
+
+<h2>SSR </h2>
 <h1> Nextjs Routing Feature Summary</h1>
 pages folder and the routing features that Nextjs provides to us
 
