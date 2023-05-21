@@ -3,10 +3,10 @@
 for data fetching in a Next.js app, we have multiple choices and options that the best one depends on the use case.
 
 <h2>SSG </h2>
-Static Site Generation, <strong> getStaticProps()</strong> 
+<p>Static Site Generation, <strong> getStaticProps()</strong> </p>
 <ul>
    <li> prepare data (props) for page component during build time and pre-renders it </li>
-   <li> <strong>ISR</strong> (Incrementally Static Regeneration) by adding revalidate key (with seconds value) in returned object</li>
+   <li> <strong>ISR</strong> (Incrementally Static Regeneration) by adding <strong> revalidate </strong> key (with seconds value) in returned object</li>
    <li> ISR gauranties that the page won't be outdated more than revalidate seconds (if a request reaches the server and the page is outdated (based on revalidate value) it will pre-render it again</li>
    <li> <strong> getStaticPaths() is required for dynamic paths </strong></li>
     <li> in getStaticPaths() we often want to pre-render only some of the most-visited paths and so we can set fallback: true or 'blocking'</li>
@@ -15,6 +15,22 @@ Static Site Generation, <strong> getStaticProps()</strong>
 </ul>
 
 <h2>SSR </h2>
+<p>Server-Side Rendering, <strong> getServerSideProps() </strong></p>
+<ul>
+   <li> provides access to request and response objects </li>
+   <li> renders the page whenever a request reaches the server for that page</li>
+</ul>
+
+<h2>Client-side data fetching </h2>
+<p>Consider using client-side regular data fetching for some use cases like the followings: </p>
+<ul>
+   <li> Highly user-specific data (like last orders in an online shop)</li>
+   <li> Partial data (like data that's only used on a part of a page)</li>
+   <li> Data changing with high frequency (like stock data)</li>
+</ul>
+
+<br />
+
 <h1> Nextjs Routing Feature Summary</h1>
 pages folder and the routing features that Nextjs provides to us
 
