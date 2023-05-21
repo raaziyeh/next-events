@@ -37,6 +37,10 @@ ul {
 	text-align: center;
 }
 
+.mt-12 {
+	margin-top: 3rem;
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
