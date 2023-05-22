@@ -8,9 +8,9 @@ for data fetching in a Next.js app, we have multiple choices and options that th
    <li> prepare data (props) for page component during build time and pre-renders it </li>
    <li> <strong>ISR</strong> (Incrementally Static Regeneration) by adding <strong> revalidate </strong> key (with seconds value) in returned object</li>
    <li> ISR gauranties that the page won't be outdated more than revalidate seconds (if a request reaches the server and the page is outdated (based on revalidate value) it will pre-render it again</li>
-   <li> <strong> getStaticPaths() is required for dynamic paths </strong></li>
+   <li> <strong> getStaticPaths()</strong> is required for <strong>dynamic paths </strong></li>
     <li> in getStaticPaths() we often want to pre-render only some of the most-visited paths and so we can set fallback: true or 'blocking'</li>
-   <li> when the the fallback is set to true or 'blocking', getStaticPaths should anticipate {notFound: true} condition</li>
+   <li> when the the fallback is set to true or 'blocking', getStaticProps should anticipate {notFound: true} condition</li>
    <li>SSG and Client-side fetching can be used together to provide the best user-experience with the most up-to-date data</li>
 </ul>
 
